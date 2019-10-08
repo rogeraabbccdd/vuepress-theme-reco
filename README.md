@@ -18,7 +18,7 @@
 ## Quick start
 
 **npx**
-
+ 
 ```
 npx @vuepress-reco/theme-cli init my-blog
 ```
