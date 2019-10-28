@@ -1,8 +1,9 @@
 <p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="150" src="./images/icon_vuepress_reco.png" alt="Vue logo"></a></p>
 
-本分支為自用修改版  
+## 說明 
+本分支為自用修改版 [Live Demo](https://rogeraabbccdd.github.io/blog/)  
 
-修改內容:
+## 修改內容
 - 移除騰訊 404 頁面
 - 繁體中文化
 - 修正中文字體，加上微軟雅黑和微軟正黑體
