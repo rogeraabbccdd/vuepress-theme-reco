@@ -104,7 +104,7 @@ export default {
 .tags
   .tag-item
     cursor pointer
-    font-family Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+    font-family Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, , "Microsoft JhengHei", "Microsoft Yahei"
     &.active
       color $accentColor
     &:hover

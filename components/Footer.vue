@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <span>
       <i class="iconfont reco-theme"></i>
-      <a target="blank" href="https://vuepress-theme-reco.recoluan.com">VuePress-theme-reco</a>
+      <a target="blank" href="https://github.com/rogeraabbccdd/vuepress-theme-reco/">VuePress-theme-reco</a>
     </span>
     <span v-if="$themeConfig.record">
       <i class="iconfont reco-beian"></i>
@@ -11,8 +11,8 @@
     <span>
       <i class="iconfont reco-copyright"></i>
       <a>
-        <span v-if="$themeConfig.startYear">{{ $themeConfig.startYear }} - </span>
-        {{ year }}
+        <span v-if="$themeConfig.startYear">{{ $themeConfig.startYear }}</span>
+        <span v-if="$themeConfig.startYear != year"> - {{ year }} </span>
         &nbsp;&nbsp;
         <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</span>
       </a>

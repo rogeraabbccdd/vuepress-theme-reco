@@ -71,18 +71,18 @@ export default {
         return [...userNav, languageDropdown]
       }
 
-      // blogConfig 的处理，根绝配置自动添加分类和标签
+      // blogConfig 的处理，根绝配置自动添加分類和標籤
       const blogConfig = this.$themeConfig.blogConfig || {}
       const isHasCategory = userNav.some(item => {
         if (blogConfig.category) {
-          return item.text === (blogConfig.category.text || '分类')
+          return item.text === (blogConfig.category.text || '分類')
         } else {
           return true
         }
       })
       const isHasTag = userNav.some(item => {
         if (blogConfig.tag) {
-          return item.text === (blogConfig.tag.text || '标签')
+          return item.text === (blogConfig.tag.text || '標籤')
         } else {
           return true
         }
@@ -97,7 +97,7 @@ export default {
             item.text = item.name
             return item
           }),
-          text: category.text || '分类',
+          text: category.text || '分類',
           type: 'links',
           icon: 'reco-category'
         })
@@ -106,7 +106,7 @@ export default {
         const tag = blogConfig.tag
         userNav.splice(parseInt(tag.location || 3) - 1, 0, {
           link: '/tag/',
-          text: tag.text || '标签',
+          text: tag.text || '標籤',
           type: 'links',
           icon: 'reco-tag'
         })

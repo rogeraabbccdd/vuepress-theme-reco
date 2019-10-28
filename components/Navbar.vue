@@ -65,6 +65,10 @@ export default {
     handleLinksWrapWidth()
     window.addEventListener('resize', handleLinksWrapWidth, false)
     this.hasThemes = themePicker === undefined ? true : themePicker
+
+    if (this.$themeConfig.darkTheme) {
+      document.body.classList.add(`reco-theme-dark`)
+    }
   },
 
   computed: {

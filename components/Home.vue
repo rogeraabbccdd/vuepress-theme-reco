@@ -10,10 +10,6 @@
       <h1 v-if="data.isShowTitleInHome !== false">{{ data.heroText || $title || '午后南杂' }}</h1>
 
       <p class="description">{{ data.tagline || $description || 'Welcome to your vuePress-theme-reco site' }}</p>
-      <p class="huawei" v-if="$themeConfig.huawei === true">
-        <i class="iconfont reco-huawei" style="color: #fc2d38"></i>
-        &nbsp;&nbsp;&nbsp;华为，为中华而为之！
-      </p>
 
       <p class="action" v-if="data.actionText && data.actionLink">
         <NavLink class="action-button" :item="actionLink"/>
@@ -152,9 +148,6 @@ export default {
     .description {
       load-start()
     }
-    .huawei {
-      load-start()
-    }
     .action-button {
       load-start()
     }
@@ -178,9 +171,6 @@ export default {
       }
       .description {
         load-end(0.24s)
-      }
-      .huawei {
-        load-end(0.32s)
       }
       .action-button {
         load-end(0.4s)

@@ -6,13 +6,14 @@
 @require './toc'
 @require './colorMixin'
 @require './iconfont.css'
+@require './cascadia.css'
 
 html, body
   padding 0
   margin 0
   text-shadow: $textShadow
 body
-  font-family Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  font-family Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Microsoft JHengHei", "Microsoft Yahei"
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size 16px
@@ -143,7 +144,7 @@ a.header-anchor
     text-decoration none
 
 code, kbd, .line-number
-  font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+  font-family "Cascadia Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace, "Microsoft JHengHei", , "Microsoft Yahei"
 
 p, ul, ol
   line-height 1.7
@@ -195,6 +196,8 @@ th, td
   // span
   //   margin-left: .5rem
 
+.iconfont span
+  font-family Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Microsoft JHengHei", "Microsoft Yahei"
 /************** 滚动条 **************/
 ::-webkit-scrollbar
   width: 6px;
@@ -294,3 +297,43 @@ th, td
 
 .search-box input
   border-radius: $borderRadius
+
+/************** FIX **************/
+a.color-button
+  cursor: pointer;
+
+/************** Dark **************/
+.reco-theme-dark
+  color: #fff;
+  background: #121212;
+  a.sidebar-link, a.nav-link, a.dropdown-title
+    color: #fff;
+  .links
+    background: #121212;
+  .navbar
+    color: #fff;
+    background: #121212;
+    .site-name
+      color: #fff;
+  .color-picker-menu
+    background: #121212;
+  .home-blog .home-blog-wrapper .info-wrapper .num > div h3
+    color: #fff;
+  .dropdown-wrapper .nav-dropdown
+    color: #fff;
+    background: #121212;
+  .sidebar
+    color: #fff;
+    background: #121212;
+  .content__default code
+    color: #dd6efd;
+  .iconfont
+    color: #aaa;
+  .footer
+    a
+      color: #fff;
+    a:hover
+      color:$accentColor
+  .category-item:hover
+    .category-name
+      color: #000;

@@ -4,7 +4,6 @@
       <h1>{{ data.heroText || $title || '午后南杂' }}</h1>
 
       <p class="description">{{ data.tagline || $description || 'Welcome to your vuePress-theme-reco site' }}</p>
-      <p class="huawei" v-if="$themeConfig.huawei === true"><i class="iconfont reco-huawei" style="color: #fc2d38"></i>&nbsp;&nbsp;&nbsp;华为，为中华而为之！</p>
     </div>
 
     <div class="home-blog-wrapper">
@@ -24,6 +23,12 @@
       <div class="info-wrapper">
         <img class="personal-img" :src="$frontmatter.faceImage ? $withBase($frontmatter.faceImage) : require('../images/home-head.png')" alt="hero">
         <h3 class="name" v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</h3>
+        <p v-if="$themeConfig.intro" style="white-space: pre; text-align:center">{{ $themeConfig.intro }}</p>
+        <h3 style="text-align:center">
+          <a v-if="$themeConfig.infoSMS" v-for="(item, index) in $themeConfig.infoSMS" :key="index" :href="item.link">
+            <i :class="`iconfont ${item.icon}`" style="font-size: 1.2rem;"></i>&nbsp;
+          </a>
+        </h3>
         <div class="num">
           <div>
             <h3>{{getPagesLength}}</h3>
@@ -31,11 +36,11 @@
           </div>
           <div>
             <h3>{{$tags.list.length}}</h3>
-            <h6>标签</h6>
+            <h6>標籤</h6>
           </div>
         </div>
         <hr>
-        <h4><i class="iconfont reco-category"></i> 分类</h4>
+        <h4><i class="iconfont reco-category"></i> 分類</h4>
         <ul class="category-wrapper">
           <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
             <router-link :to="item.path">
@@ -45,7 +50,7 @@
           </li>
         </ul>
         <hr>
-        <h4><i class="iconfont reco-tag"></i> 标签</h4>
+        <h4><i class="iconfont reco-tag"></i> 標籤</h4>
         <TagList @getCurrentTag="getPagesByTags"></TagList>
       </div>
     </div>
@@ -174,7 +179,7 @@ export default {
       color #fff;
     }
 
-    h1, .description, .action, .huawei {
+    h1, .description, .action {
       color #fff!important
     }
 
@@ -297,9 +302,6 @@ export default {
     .description {
       load-start()
     }
-    .huawei {
-      load-start()
-    }
     .action-button {
       load-start()
     }
@@ -323,9 +325,6 @@ export default {
     }
     .description {
       load-end(0.24s)
-    }
-    .huawei {
-      load-end(0.32s)
     }
     .action-button {
       load-end(0.4s)
