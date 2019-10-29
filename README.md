@@ -29,4 +29,7 @@
   ],
   ```
 - 修正文章作者字體
-- 新增黑暗模式 `darkTheme: true` 設定，themePicker 會出現黑暗模式開關選項，如果 themePicker 設為 false 的話則預設開啟黑暗模式
+- 新增黑暗模式設定
+  - themePicker 會出現黑暗模式開關選項
+  - `defaultDark` 設定可以調整是否預設開啟黑暗模式
+  - 如果使用者的裝置有開啟黑暗模式的話會自動套用，不可關閉
