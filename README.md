@@ -10,7 +10,6 @@
 - 移除 iconfont 的阿里 cdn，改用本地檔案
 - 移除華為文案
 - 程式碼使用微軟 Cascadia Code 字形
-- 新增主題設定 footer，
 - 新增主題設定 intro，個人檔案下的小說明
   ```js
   intro: "🍰 It's Muffin Time!"
@@ -33,3 +32,14 @@
   - themePicker 會出現黑暗模式開關選項
   - `defaultDark` 設定可以調整是否預設開啟黑暗模式
   - 如果使用者的裝置有開啟黑暗模式的話會自動套用，不可關閉
+- 新增許多 footer 設定並移除備案資訊
+  ```js
+  themeConfig: {
+    // 自訂 footer 文字
+    footerCustom: "Made with ❤ by XXX",
+    // 是否在 footer 顯示主題連結
+    footerTheme: false,
+    // 是否在 footer 顯示年分
+    footerYear: false,
+  }
+  ```
