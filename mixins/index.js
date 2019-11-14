@@ -18,6 +18,11 @@ export default {
         return this._getTimeNum(b) - this._getTimeNum(a)
       })
     },
+    _sortPostDataName (posts) {
+      posts.sort((a, b) => {
+        return a.title.localeCompare(b.title);
+      })
+    },
     // 获取时间的数字类型
     _getTimeNum (date) {
       return parseInt(new Date(date.frontmatter.date).getTime())
