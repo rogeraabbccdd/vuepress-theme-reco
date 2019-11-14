@@ -43,3 +43,4 @@
     footerYear: false,
   }
   ```
+- 新增 `catOrder: "name"`，分類頁文章依標題排序
