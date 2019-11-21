@@ -9,7 +9,7 @@ export default {
     _filterPostData (posts) {
       posts = posts.filter(item => {
         const { home, date, publish } = item.frontmatter
-        return !(home == true || date === undefined || publish === false)
+        return !(home == true || !item.path.match(/\/views\/.*/g) || publish === false)
       })
       return posts
     },
